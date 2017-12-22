@@ -42,7 +42,7 @@
     <main class="main" id="main">
     <div id="main-diorama" class="container-fluid">
         <div class="row">
-            <!-- <div class="col-md-12 middle-widget"> -->
+            <!-- <div class="col-md-12 middle-widget tes git"> -->
                 @php
                     $news_id = get_diorama()[0]['attributes']['id'];
                     if($news_id){
