@@ -68,7 +68,7 @@
     </div>
 </section>
 
-{{ $post->categories[0]['id'] }}
+
 @if($post->categories[0]['slug'] == 'berita')
 
 <section class="main-box">
