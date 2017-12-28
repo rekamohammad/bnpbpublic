@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <section class="main-box">
     <div class="main-box-content">
-        <!-- <div class="article-image">
+      <!--  <div class="article-image">
             <img class="img-full img-bg" src="{{ get_object_image($post->image, 'featured') }}" alt="{{ $post->name }}"
              style="background-image: url('{{ get_object_image($post->image) }}');">
         </div> !-->
@@ -68,19 +68,15 @@
     </div>
 </section>
 
-
-@if($post->categories[0]['slug'] == 'berita')
-
+@if($post->categories->first()->slug == 'berita')
 <section class="main-box">
     <div class="main-box-header">
         <h2><i class="fa fa-leaf"></i> {{ __('Related posts') }}</h2>
     </div>
     <div class="main-index main-box-content">
         <div class="box-style box-style-3">
-		 
-		
-            @foreach (get_related_posts($post->categories[0]['id'] , 5, $post->views) as $related_item)
-                <!-- <div class="media-news">
+            @foreach (get_related_posts($post->categories->first()->id, 5, $post->views) as $related_item)
+              <!--  <div class="media-news">
                     <a href="{{ route('public.single.detail', $related_item->slug) }}" title="{{ $related_item->name }}" class="media-news-img">
                         <img class="img-full img-bg" src="{{ get_object_image($related_item->image) }}" style="background-image: url('{{ get_object_image($related_item->image) }}');" alt="{{ $related_item->name }}">
                     </a>
@@ -98,22 +94,19 @@
                         </div>
                     </div>
                 </div> !-->
-				<div class="media-news block-has-border" style="height:75px;">
-					<div class="row">
-						<div class="col-md-12">
-							<a href="{{ route('public.single.detail', $related_item->slug) }}"
-							   title="{{ $related_item->name }}">
-								<span class="post-date">
-									{{ date('d F Y | H:i', strtotime($post->created_at)) }}WIB
-								</span>
-								<span class="post-item"
-									  title="{{ $related_item->description }}">
-									<h3>{{ $related_item->name }}</h3>
-								</span>
-							</a>
-						</div>
-					</div>
+		<div class="media-news block-has-border" style="height:75px;">
+			<div class="row">
+				<div class="col-md-12"> <a href="{{ 
+route('public.single.detail', $related_item->slug) }}"  title="{{ $related_item->name }}">
+				<span class="post-date">
+				{{ date('d F Y | H:i', strtotime($post->created_at)) }}WIB
+				</span>
+				 <span class="post-item"  title="{{ $related_item->name }}">
+				<h3>{{ $related_item->name }}</h3>
+				</span></a>
 				</div>
+				</div>
+			</div>
             @endforeach
         </div>
     </div>
