@@ -66,7 +66,7 @@
         <h4 class="modal-title">Modal Header</h4>
       </div>
       <div class="modal-body">
-        <iframe src="" width="100%" height="73%"></iframe>
+        <div id="pdf-template" style="width: 100%; height: 73%;"></div>
       </div>
     </div>
   </div>
@@ -76,6 +76,7 @@
 <link media="all" type="text/css" rel="stylesheet" href="/themes/bnpb/assets/css/fancybox.css">
 <script src="/themes/bnpb/assets/js/fancybox.min.js"></script>
 <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
+<script type="text/javascript" src="/js/pdf.js"></script>
 <script type="text/javascript" src="/js/pdf_ext.js"></script>
 
 <script>

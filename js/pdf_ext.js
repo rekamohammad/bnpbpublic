@@ -4,7 +4,8 @@ $('a').on('click', function() {
 	if (rules.test(href)) {
 		var title = $(this).html();
 		$('#myModal').find('.modal-title').html(title);
-		$('#myModal').find('iframe').attr('src', href);
+		PDFObject.embed(href, "#pdf-template");
+		//$('#myModal').find('iframe').attr('src', href);
 		$('#myModal').modal('show');
 		return false;	
 	}
