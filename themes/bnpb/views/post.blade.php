@@ -5,7 +5,7 @@
             <img class="img-full img-bg" src="{{ get_object_image($post->image, 'featured') }}" alt="{{ $post->name }}"
              style="background-image: url('{{ get_object_image($post->image) }}');">
         </div> !-->
-        @if (!$post->tags->isEmpty())
+        @if (!$post->tags->isEmpty()) 
             <div class="tags-wrap">
                 @foreach ($post->tags as $tag)
                     <span>
