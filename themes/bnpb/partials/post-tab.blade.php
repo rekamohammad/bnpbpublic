@@ -77,7 +77,7 @@
 			            @endforeach
 			            <a href="{{ route('public.single.detail', $_cats[$catIds]->slug) }}" class="block-button">
 			                <span class="post-date">
-			                    Berita Terbaru Lainnya
+							Siaran Pers Lainnya
 			                </span>
 			            </a>
 			        @endif
@@ -102,7 +102,7 @@
 			            @endforeach
 			            <a href="{{ route('public.single.detail', $_cats[$catIds]->slug) }}" class="block-button">
 			                <span class="post-date">
-			                    Pengumuman Terbaru Lainnya
+			                    Pengumuman Lainnya
 			                </span>
 			            </a>
 			        @endif
@@ -114,4 +114,3 @@
     	@endforeach
 	</div>
 @endif
-
