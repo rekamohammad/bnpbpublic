@@ -118,8 +118,6 @@
 			@endif
 @else
 
-	
-	
 <section class="main-box">
 <div class="main-box-header">
 <h2><i class="fa fa-leaf"></i> {{ __('Related posts') }}</h2>
