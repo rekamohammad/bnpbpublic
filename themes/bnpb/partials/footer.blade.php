@@ -54,30 +54,9 @@
 <![endif]-->
 
 <!-- <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=58b80e5cfacf57001271be31&product=sticky-share-buttons"></script> -->
-
-<!-- modal for popup-->
-<div id="myModal" class="modal fade" role="dialog" data-backdrop="static">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <div id="pdf-template" style="width: 100%; height: 73%;"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end modal for popup-->
-
 <link media="all" type="text/css" rel="stylesheet" href="/themes/bnpb/assets/css/fancybox.css">
 <script src="/themes/bnpb/assets/js/fancybox.min.js"></script>
 <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
-<script type="text/javascript" src="/js/pdf.js"></script>
-<script type="text/javascript" src="/js/pdf_ext.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -91,7 +70,7 @@
             arrows: false,
             centerMode: true,
             focusOnSelect: true
-        });  
+        });
         $('#list-photo').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -106,10 +85,10 @@
             dots: true,
             centerMode: true,
             focusOnSelect: true
-        });   
+        });
         $("[data-fancybox]").fancybox({
             loop : true,
-        });   
+        });
         var windowsize = $(window).width();
         if (windowsize < 768) {
             $('body').on('click', '.menu-item-has-children > a', function(){
@@ -117,7 +96,7 @@
                 $(this).parent().find('> .dropdown-menu').slideToggle('fast');
                 console.log('jalan');
             });
-        }   
+        }
     });
 </script>
 @if(!empty(theme_option('facebook-app-id')))
@@ -132,4 +111,3 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 @endif
 </body>
-</html>
