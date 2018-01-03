@@ -1,9 +1,36 @@
 <footer class="footer" id="footer">
     <div class="container">
         <div class="row">
+        @php
+            $detect = new App\MobileDetect\Mobile_Detect;
+        @endphp
+        @if ($detect->isMobile())
+            <div class="col-md-12 about-footer">
+                <img src="/uploads/3/logofooter.png" class="img-responsive">
+                <address>
+                    <p>Graha BNPB - Jl. Pramuka Kav.38 Jakarta <br>Timur 13120</p>
+                    <span><a href="#">Telp.021-29827793</a> <br> Fax.021-21281200 <br> Email: <a href="#">contact@bnpb.go.id</a></span>
+                    <h5>Pusdalop bnpb</h5>
+                    <span>Telp. +62 21 29827444 , 29827666 <br><i class="wa"></i>  +62 812 1237 575 <br><a>Email:pusdalops@bnpb.go.id</a></span>
+                </address>
+            </div><br></br>
+        @else
             {!! dynamic_sidebar('footer_sidebar') !!}
+        @endif
         </div>
     </div>
+    @if ($detect->isMobile())
+    <div class="footer-end fixed">
+        <center>
+        <div class="hi-icon-wrap hi-icon-effect-3 hi-icon-effect-3a">
+            <a href="https://www.facebook.com/infobnpb" title="Facebook" class="hi-icon fa fa-facebook fa-lg"></a>
+            <a href="https://twitter.com/BNPB_Indonesia" title="Twitter" class="hi-icon fa fa-twitter fa-lg"></a>
+            <a href="https://www.instagram.com/bnpb_indonesia/" title="Instagram" class="hi-icon fa fa-instagram fa-lg"></a>
+            <a href="https://www.youtube.com/user/BNPBIndonesia/" title="Youtube" class="hi-icon fa fa-youtube-play fa-lg"></a>
+        </div>
+        </center>
+    </div>
+    @else
     <div class="footer-end">
         <div class="container">
             <div class="row">
@@ -22,6 +49,7 @@
             </div>
         </div>
     </div>
+    @endif     
 </footer>
 
 @if (app()->environment() != 'production')
@@ -54,30 +82,10 @@
 <![endif]-->
 
 <!-- <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=58b80e5cfacf57001271be31&product=sticky-share-buttons"></script> -->
-
-<!-- modal for popup-->
-<div id="myModal" class="modal fade" role="dialog" data-backdrop="static">
-  <div class="modal-dialog modal-lg">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <div id="pdf-template" style="width: 100%; height: 73%;"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end modal for popup-->
-
 <link media="all" type="text/css" rel="stylesheet" href="/themes/bnpb/assets/css/fancybox.css">
 <script src="/themes/bnpb/assets/js/fancybox.min.js"></script>
 <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
-<script type="text/javascript" src="/js/pdf.js"></script>
-<script type="text/javascript" src="/js/pdf_ext.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.6/js/lightgallery-all.js"></script>
 
 <script>
     $(document).ready(function () {
@@ -91,7 +99,7 @@
             arrows: false,
             centerMode: true,
             focusOnSelect: true
-        });
+        });  
         $('#list-photo').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -106,10 +114,10 @@
             dots: true,
             centerMode: true,
             focusOnSelect: true
-        });
+        });   
         $("[data-fancybox]").fancybox({
             loop : true,
-        });
+        });   
         var windowsize = $(window).width();
         if (windowsize < 768) {
             $('body').on('click', '.menu-item-has-children > a', function(){
@@ -118,6 +126,9 @@
                 console.log('jalan');
             });
         }
+        $('#aniimated-thumbnials').lightGallery({
+            thumbnail:true
+        }); 
     });
 </script>
 @if(!empty(theme_option('facebook-app-id')))
@@ -132,3 +143,4 @@
     }(document, 'script', 'facebook-jssdk'));</script>
 @endif
 </body>
+</html>
