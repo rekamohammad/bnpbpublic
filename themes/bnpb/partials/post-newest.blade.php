@@ -4,7 +4,7 @@
 <div class="widget-content green-section">
 	<div class="tab-pane fade in active">
 		@php
-			$_news = get_posts_by_category(17,10,5);
+			$_news = get_posts_by_category(17,10,10);
 		@endphp
 		<div class="widget-title">
 			<span>Berita Terbaru</span>
