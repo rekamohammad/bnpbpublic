@@ -19,7 +19,7 @@
 
         <div class="article-date">
             <span class="post-date">
-                {{ date('d F Y | H:i', strtotime($post->created_at)) }}WIB
+                {{ date('d F Y | H:i', strtotime($post->created_at)) }} WIB | Dilihat {{ $post->views }} kali
             </span>
         </div>
 
@@ -118,6 +118,8 @@
 			@endif
 @else
 
+	
+	
 <section class="main-box">
 <div class="main-box-header">
 <h2><i class="fa fa-leaf"></i> {{ __('Related posts') }}</h2>
