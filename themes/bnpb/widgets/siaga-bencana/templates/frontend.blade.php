@@ -10,8 +10,8 @@
                 <img src="{{ get_siaga_bencana_post()->image }}" class="img-responsive" style="width:100%;"/>
             </a>
             @else
-            <a href="/uploads/24/2017-09-27-sosialisasi-hadapi-gunung-agung-smprnsiang.jpeg" data-sub-html="<h4> Infografis Siaga Bencana </h4><p> Sosialisasi Menghadapi Letusan Gunung Agung.</p>" >
-                <img src="/uploads/24/2017-09-27-sosialisasi-hadapi-gunung-agung-smprnsiang.jpeg" class="img-responsive" style="width:100%;">
+            <a href="/uploads/24/2017-09-27-sosialisasi-hadapi-gunung-agung-smprnsiang-copy.jpeg" data-sub-html="<h4> Infografis Siaga Bencana </h4><p> Sosialisasi Menghadapi Letusan Gunung Agung.</p>" >
+                <img src="/uploads/24/2017-09-27-sosialisasi-hadapi-gunung-agung-smprnsiang-copy.jpeg" class="img-responsive" style="width:100%;height: 34%">
             </a>
             @endif
         </div>

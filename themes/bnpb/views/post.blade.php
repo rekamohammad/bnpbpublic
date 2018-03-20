@@ -32,7 +32,7 @@
                 @foreach (gallery_meta_data($post->id, 'post') as $image)
                     @if ($image)
                         <div class="col-xs-3">
-                            <img src="{{ url(array_get($image, 'img')) }}" alt="{{ array_get($image, 'description') }}" class="img-responsive">
+                            <img src="{{ url(array_get($image, 'img')) }}" alt="{{ array_get($image, 'description') }}" class="img-responsive" style="height: 30%;">
                         </div>
                     @endif
                 @endforeach
