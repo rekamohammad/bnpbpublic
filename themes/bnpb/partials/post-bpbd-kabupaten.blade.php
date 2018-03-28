@@ -61,7 +61,7 @@
 											<div class="panel-heading" role="tab" id="subheading{{$numbers+1}}" style="background: #3b5999;color: #fff;">
 											  <h4 class="panel-title">
 												{{$numbers+1}}. {{ $detail_kabupaten->kabupaten }} <span class="fa fa-angle-down"></span>
-											  </h4>
+											  </h4> 
 											</div>
 									</a>
 									<div id="subcollapse{{$numbers+1}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="subheading{{$numbers+1}}">
